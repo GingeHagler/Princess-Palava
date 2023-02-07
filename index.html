@@ -8,82 +8,112 @@
   <meta name="description" content="disney princess themed memory card game">
   <meta name="keywords" content="memory game, princess card, turn card">
 
+  <!-- style sheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Princess Picker</title>
+
+  <title>Princess Pair Picker</title>
 </head>
 
 <body>
+  <h1 class="page-title">Princess Pair Picker</h1>
 
-  <section class="memory-game">
-        
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Anna.png" alt="Anna"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Anna.png" alt="Anna"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Belle.png" alt="Belle"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Belle.png" alt="Belle"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Elsa.png" alt="Elsa"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Elsa.png" alt="Elsa"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Merida.png" alt="Merida"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Merida.png" alt="Merida"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Moana.png" alt="Moana"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Moana.png" alt="Moana"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Mulan.png" alt="Mulan"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Mulan.png" alt="Mulan"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Tiana.png" alt="Tiana"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Tiana.png" alt="Tiana"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Rapunzel.png" alt="Rapunzel"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    <div class="princess-card">
-      <img class="front-card" src="assets/css/images/Rapunzel.png" alt="Rapunzel"/>
-      <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown"/>
-    </div>
-    
-  </section>
+  <!-- memory game grid -->
 
-  <script src="assets/js/script.js"></script>
+  <div class="game-container">
+    <div class="game-data-container">
+      <div onclick="flipcard()" class="game-data">
+        <span class="timer">Timer 0:00</span>
+      </div>
+      <div class="game-data"> Moves
+        <span class="moves">0</span>
+      </div>
+    </div>
+
+    <section class="memory-game">
+
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Anna.png" alt="Anna" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Anna.png" alt="Anna" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Belle.png" alt="Belle" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Belle.png" alt="Belle" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Elsa.png" alt="Elsa" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Elsa.png" alt="Elsa" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Merida.png" alt="Merida" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Merida.png" alt="Merida" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Moana.png" alt="Moana" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Moana.png" alt="Moana" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Mulan.png" alt="Mulan" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Mulan.png" alt="Mulan" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Tiana.png" alt="Tiana" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Tiana.png" alt="Tiana" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Rapunzel.png" alt="Rapunzel" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+      <div class="princess-card">
+        <img class="front-card" src="assets/css/images/Rapunzel.png" alt="Rapunzel" />
+        <img class="back-card" src="assets/css/images/princess-crown.png" alt="Princess Crown" />
+      </div>
+
+    </section>
+
+    <!-- to reset game-->
+
+    <div>
+      <button class="main-btn" onclick="reset()">Reset Game</button> <button id="modalBtn" class="hero-btn">How to pair the Princesses!</button>
+    </div>
+
+    <!-- rules and instructions -->
+
+    <section>
+      <div class="rules" id="rules">
+        <div>
+
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

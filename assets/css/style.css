@@ -1,10 +1,33 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
+    height: 100vh;
     background-image: url(../css/images/disney-castle-fireworks.jpg);
     background-color: purple;
+}
+
+.memory-game {
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid black;
+}
+
+.princess-card {
+    width: 25%;
+    height: 33.333%
+    position: relative;
+    border: 3px solid black
+}
+
+.front-card, 
+.back-card {
+    padding: 20px;
+    border: 3px solid black;
+    position: absolute; 
 }

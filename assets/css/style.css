@@ -6,16 +6,19 @@
 
 body {
     height: 100vh;
+    display: flex;
     background-image: url(../css/images/disney-castle-fireworks.jpg);
     background-color: purple;
 }
 
 .memory-game {
-    height: 700px;
-    width: 700px;
+    height: 500px;
+    width: 500px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    border: 3px solid black;
+    perspective: 1000px;
+    border: 3px solid rgb(195, 127, 255);
 }
 
 .princess-card {
@@ -23,12 +26,31 @@ body {
     justify-content: center;
     align-items: center;
     width: 25%;
-    border: 3px solid black
-    
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    border: 3px solid rgb(195, 127, 255);
+}
+
+.princess-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.princess-card.flip {
+  transform: rotateY(180deg);
 }
 
 .front-card, 
 .back-card {
-    width: 10%;
+    width: 100%;
+    padding: 17.5px;
     position: absolute; 
+    background: lightskyblue;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    transform: rotateY('180deg');
 }

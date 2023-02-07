@@ -101,7 +101,7 @@
     <!-- to reset game-->
 
     <div>
-      <button class="main-btn" onclick="reset()">Reset Game</button> <button id="modalBtn" class="hero-btn">How to pair the Princesses!</button>
+      <button class="main-btn" onclick="reset()">Reset Game</button> <button id="modalBtn" class="hero-btn">How to pair the Princesses</button>
     </div>
 
     <!-- rules and instructions -->
@@ -109,7 +109,32 @@
     <section>
       <div class="rules" id="rules">
         <div>
+          <h2 class="page-title">How to pair the Princesses</h2>
+        </div>
+      </div>
+      <div class="rules-card">
+        <div class="card-body">
+          <p class="rules-list">
+            <p>Click a card to start!</p>
+            <p>Match two princesses at a time</p>
+            <p>Pair all eight princesses to win</p>
+            <p>Play again to complete the game faster and with less moves!</p>
+          </p>
 
+        </div><span id="closeBtn" class="main-btn">You got this Princess!</span>
+      </div>
+    </section>
+
+    <!-- Winning Message -->
+
+    <section class="win-msg">
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span id="close" class="close">&times;</span>
+          <h2>CONGRATULATIONS!!</h2>
+          <p>You matched all the princesses in....</p>
+          <p><span id="finalMove"> </span> </p>
+          <p><span id="totalTime"> </span> </p>
         </div>
       </div>
     </section>

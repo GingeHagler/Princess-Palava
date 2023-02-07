@@ -2,7 +2,13 @@
  * Game Variables 
  */
 
-const cards = document.querySelectorAll('princess-card');
+const card = document.getElementsByClassName("princess-card");
+
+card.addEventListener("click", flipCard);
+
+function flipCard() {
+    card.classList.toggle("flipCard");
+}
 
 let hasFlippedCard = false;
 let lockBoard = false;

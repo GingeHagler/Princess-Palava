@@ -30,6 +30,10 @@ body {
     border: 3px solid rgb(195, 127, 255)
 }
 
+.flipCard {
+    transform: rotateY('180deg');
+}
+
 .front-card,
 .back-card {
     width: 100%;

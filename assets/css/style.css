@@ -23,6 +23,15 @@ body {
     font-size: 50px;
 }
 
+.game-container {
+    margin: 5px 0 10px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5px;
+    justify-content: center;
+    perspective: 1000px;
+}
+
 .game-data-container {
     grid-column: 1 / -1;
     display: flex;
@@ -33,15 +42,6 @@ body {
 .game-data {
     color:rgb(195, 127, 255);
     font-size: 30px;
-}
-
-.game-container {
-    margin: 5px 0 10px;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 5px;
-    justify-content: center;
-    perspective: 1000px;
 }
 
 .princess-card {
@@ -68,15 +68,13 @@ body {
 .back-card {
     width: 100%;
     height: 100%;
-    padding: 27.5px;
+    padding: 12px;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
     border-width: .2px;
     overflow: hidden;
-    background: lightskyblue;
     backface-visibility: hidden;
 }
 
@@ -84,17 +82,17 @@ body {
     transform: rotateY(180deg);
 }
 
-.main-btn {
+.main-btn,
+#modal-btn {
     display: inline-block;
     text-decoration: none;
-    color: darkblue;
-    border: 3px solid purple;
-    padding: 12px 34px;
+    padding: 0.5%;
+    color: blanchedalmond;
+    background-color: blueviolet;
+    border: 3px solid rgb(195, 127, 255);    
     font-size: 20px;
-    background: darkblue;
     position: relative;
-    cursor: pointer;
-    border-radius: 10px;
+    cursor: pointer;    
     transition: .5s;
 }
 

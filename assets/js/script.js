@@ -20,12 +20,11 @@ let moves = 0;
 let finalTime = "";
 
 //events 
-cards.forEach(card => card.addEventListener('click', flipcard));
+cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
 modalBtn.addEventListener('click', showRules);
 closeBtn.addEventListener('click', closeRules);
-
 
 function showRules() {
     rules.style.display = "block";
@@ -82,11 +81,10 @@ function pairMatch() {
     resetBoard();
 }
 
-// board is locked if no match then cards reset
+// board is locked if no match and cards are reset
 
 function noMatch() {
     lockBoard = true;
-
 
     setTimeout(() => {
         firstCard.classList.remove('flip');
@@ -152,7 +150,7 @@ function showWinMessage() {
     reset();
 }
 
-window.onClick = function (event) {
+window.onClick = function(event) {
     if (event.target.id == 'close') {
         document.getElementById('modal').style.display = "none";
     }

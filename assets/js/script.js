@@ -4,7 +4,7 @@
 
 const cards = document.querySelectorAll('.princess-card');
 const moveContainer = document.querySelector(".moves");
-const rules = document.getElementById('rules');
+const rules = document.getElementById('instructions');
 const modal = document.getElementById('modal');
 const timeContainer = document.querySelector(".timer");
 const MAX_MATCH = 8;
@@ -150,7 +150,7 @@ function showWinMessage() {
     reset();
 }
 
-window.onClick = function(event) {
+globalThis.onClick = function(event) {
     if (event.target.id == 'close') {
         document.getElementById('modal').style.display = "none";
     }

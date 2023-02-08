@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Mouse+Memoirs&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     font-family: 'Kurale', sans-serif;
     box-sizing: border-box;
     text-align: center;
@@ -10,38 +10,54 @@
 
 body {
     height: 100vh;
+    margin: 0;
     background-image: url(../css/images/disney-castle-fireworks.jpg);
     background-color: purple;
 }
 
-.memory-game {
-    width: 500px;
-    height: 500px;
-    margin: auto;
+.game-title {
+    color: blue;
+    font-family: 'Kurale', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 50px;
+}
+
+.game-data-container {
+    grid-column: 1 / -1;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.game-data {
+    color:rgb(195, 127, 255);
+    font-size: 30px;
+}
+
+.game-container {
+    margin: 5px 0 10px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5px;
+    justify-content: center;
     perspective: 1000px;
-    border: 3px solid rgb(195, 127, 255);
 }
 
 .princess-card {
-    width: 22%;
-    height: fit-content;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
     transform: scale(1);
     transform-style: preserve-3d;
-    transition: transform .5s;
+    transition: transform .3s;
     border: 3px solid rgb(195, 127, 255);
 }
 
 .princess-card:active {
     transform: scale(0.98);
-    transition: transform .5s;
+    transition: transform .3s;
 }
 
 .princess-card.flip {
@@ -54,7 +70,12 @@ body {
     height: 100%;
     padding: 27.5px;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
+    border-width: .2px;
+    overflow: hidden;
     background: lightskyblue;
     backface-visibility: hidden;
 }
@@ -62,3 +83,97 @@ body {
 .front-card {
     transform: rotateY(180deg);
 }
+
+.main-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: darkblue;
+    border: 3px solid purple;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: darkblue;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.rules {
+    display: none;
+    background-color: blanchedalmond;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rules-card {
+    font-family: 'Mouse Memoirs', sans-serif;
+    border: 3px solid purple;
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    margin: 100px 500px 100px;
+    padding: 500px;
+    justify-content: center;
+}
+
+.rules-list {
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.p {
+    font-family: 'Mouse Memoirs', sans-serif;
+    margin-bottom: 25px;
+    color: darkslateblue;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    background-color: darkblue;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    font-size: 100%;
+    padding-bottom: 20px;
+}
+
+.modal-content {
+    font-family: 'Mouse Memoirs', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    margin: 20px 150px;
+    border: 2px solid darkblue;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.close {
+    align-self: flex-end;
+    color: blue;
+    font-size: 3em;
+}
+
+.close:hover,
+.close:focus {
+    color:rgb(195, 127, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* media queries */
+/* for smaller screens from 800px */
+

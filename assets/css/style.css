@@ -12,6 +12,7 @@ body {
     height: 100vh;
     margin: 0;
     background-image: url(../css/images/disney-castle-fireworks.jpg);
+    background-size: cover;
     background-color: purple;
 }
 
@@ -115,8 +116,6 @@ body {
     border: 3px solid purple;
     background-color: blanchedalmond;
     border-radius: 20px;
-    margin: 100px 500px 100px;
-    padding: 500px;
     justify-content: center;
 }
 

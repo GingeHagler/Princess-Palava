@@ -2,16 +2,15 @@
  * General Game Variables
  */
 
-const cards = document.querySelectorAll('.princess-card');
+const cards = document.querySelectorAll('princess-card');
 const moveContainer = document.querySelector(".moves");
 const rules = document.getElementById('instructions');
 const modal = document.getElementById('modal');
 const timeContainer = document.querySelector(".timer");
 const MAX_MATCH = 8;
-const modalBtn = document.getElementById("modalBtn");
+const modalbtn = document.getElementById("modal-btn");
 const closeBtn = document.getElementById("closeBtn");
 
-console.log(princessCard);
 
 let gameOn = false;
 let perfectMatch = 0;
@@ -25,7 +24,7 @@ let finalTime = "";
 cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
-modalBtn.addEventListener('click', showRules);
+modalbtn.addEventListener('click', showRules);
 closeBtn.addEventListener('click', closeRules);
 
 function showRules() {

@@ -2,7 +2,7 @@
  * General Game Variables
  */
 
-const cards = document.querySelectorAll('princess-card');
+const cards = document.querySelectorAll('.princess-card');
 const moveContainer = document.querySelector(".moves");
 const rules = document.getElementById('instructions');
 const modal = document.getElementById('modal');

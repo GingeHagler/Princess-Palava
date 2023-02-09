@@ -11,6 +11,8 @@ const MAX_MATCH = 8;
 const modalBtn = document.getElementById("modalBtn");
 const closeBtn = document.getElementById("closeBtn");
 
+console.log(princessCard);
+
 let gameOn = false;
 let perfectMatch = 0;
 let flippedCard = false;

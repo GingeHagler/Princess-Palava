@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
-}
+  }
 
 .game-data {
     color:rgb(195, 127, 255);

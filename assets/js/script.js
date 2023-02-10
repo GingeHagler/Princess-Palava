@@ -130,10 +130,12 @@ function stopTime() {
 
 //reset all cards after every round
 
-function resetBoard() {
-    [flippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-}
+
+    function resetBoard() {
+        hasFlippedCard =  lockBoard = false;
+        firstCard = secondCard = null
+      }
+
 
 function winGame() {
     stopTime();

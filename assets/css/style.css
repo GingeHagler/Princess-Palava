@@ -163,8 +163,8 @@ p {
 
 .close {
     align-self: flex-end;
-    color: blue;
-    font-size: 3em;
+    color: black;
+    font-size: 5em;
 }
 
 .close:hover,

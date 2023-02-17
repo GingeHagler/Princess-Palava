@@ -1,7 +1,9 @@
 /**
  * General Game Variables
  */
+// self executing function here
 
+    
 const cards = document.querySelectorAll('.princess-card');
 const moveContainer = document.querySelector(".moves");
 const rules = document.getElementById('instructions');
@@ -49,13 +51,17 @@ function flipCard() {
     this.classList.add('flip');
 
     if (!flippedCard) {
+
         flippedCard = true;
         firstCard = this;
+        firstid = firstCard.id;
 
         return;
     }
 
-    secondCard = this;
+    secondCard = this; 
+    secondid = secondCard.id;
+    console.log(secondid);
 
     checkCardMatch();
 }
@@ -64,8 +70,11 @@ function flipCard() {
 To check if first card and second card match
 */
 
+
+
 function checkCardMatch() {
-    let isMatch = firstCard.dataset.image === secondCard.dataset.image;
+    
+    let isMatch = firstid === secondid;
     if (isMatch) perfectMatch += 1;
 
     if (isMatch) pairMatch();
@@ -77,8 +86,10 @@ function checkCardMatch() {
 // when cards are paired they can no longer be clicked
 
 function pairMatch() {
+
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    addMove();
     resetBoard();
 }
 
@@ -103,7 +114,7 @@ moveContainer.innerHTML = 0;
 
 function addMove() {
     moves++;
-    moveContainer.innerHtml = moves;
+    document.getElementById("movecounter").innerHTML = moves;
 }
 
 //timer
@@ -114,7 +125,7 @@ let timeStart = false;
 timeContainer.innerHTML = "Time " + minutes + " : " + seconds;
 
 function timer() {
-    time = setInterval(function() {
+    time = setInterval(function () {
         seconds++;
         if (seconds === 59) {
             minutes++;
@@ -131,10 +142,10 @@ function stopTime() {
 //reset all cards after every round
 
 
-    function resetBoard() {
-        hasFlippedCard =  lockBoard = false;
-        firstCard = secondCard = null
-      }
+function resetBoard() {
+    [flippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
 
 
 function winGame() {
@@ -153,9 +164,9 @@ function showWinMessage() {
     reset();
 }
 
-globalThis.onClick = function(event) {
+window.onclick = function (event) {
     if (event.target.id == 'close') {
-        document.getElementById('modal').style.display = "none";
+        modal.style.display = "none";
     }
 };
 
@@ -167,6 +178,7 @@ function shuffle() {
         cards.style.order = randomPosition;
     });
 }
+
 
 // new game button
 
@@ -184,8 +196,10 @@ function reset() {
         moveContainer.innerHTML = 0;
         perfectMatch = 0;
         cards.forEach(cardReset => cardReset.classList.remove('flip'));
-        shuffle();
         cards.forEach(card => card.addEventListener('click', flipCard));
 
+    }, 50);
+    setTimeout(() => {
+        shuffle(); 
     }, 500);
 }

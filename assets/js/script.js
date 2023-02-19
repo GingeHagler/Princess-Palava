@@ -8,7 +8,7 @@ const cards = document.querySelectorAll('.princess-card');
 const moveContainer = document.querySelector(".moves");
 const rules = document.getElementById('instructions');
 const modal = document.getElementById('modal');
-const timeContainer = document.querySelector(".timer");
+
 const MAX_MATCH = 8;
 const modalbtn = document.getElementById("modal-btn");
 const closeBtn = document.getElementById("closeBtn");
@@ -20,7 +20,7 @@ let flippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let moves = 0;
-let finalTime = "";
+
 
 //events 
 cards.forEach(card => card.addEventListener('click', flipCard));
@@ -43,7 +43,7 @@ onclick function for cards
 function flipCard() {
     if (!gameOn) {
         gameOn = true;
-        timer();
+        
     }
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -117,27 +117,7 @@ function addMove() {
     document.getElementById("movecounter").innerHTML = moves;
 }
 
-//timer
-let time;
-let minutes = 0;
-let seconds = 0;
-let timeStart = false;
-timeContainer.innerHTML = "Time " + minutes + " : " + seconds;
 
-function timer() {
-    time = setInterval(function () {
-        seconds++;
-        if (seconds === 59) {
-            minutes++;
-            seconds = 0;
-        }
-        timeContainer.innerHTML = "Time " + minutes + " : " + seconds;
-    }, 1000);
-}
-
-function stopTime() {
-    clearInterval(time);
-}
 
 //reset all cards after every round
 
@@ -149,7 +129,7 @@ function resetBoard() {
 
 
 function winGame() {
-    stopTime();
+    
     showWinMessage();
 }
 
@@ -157,16 +137,16 @@ function winGame() {
 
 function showWinMessage() {
     modal.style.display = "block";
-    finalTime = timeContainer.innerHTML;
+    
 
     document.getElementById("finalMove").innerHTML = moves;
-    document.getElementById("totalTime").innerHTML = finalTime;
+    
     reset();
 }
 
 window.onclick = function (event) {
     if (event.target.id == 'close') {
-        modal.style.display = "none";
+        document.getElementById('modal').style.display = "none";
     }
 };
 

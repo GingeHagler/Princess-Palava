@@ -61,7 +61,7 @@ function flipCard() {
 
     secondCard = this; 
     secondid = secondCard.id;
-    console.log(secondid);
+    
 
     checkCardMatch();
 }
@@ -74,7 +74,7 @@ To check if first card and second card match
 
 function checkCardMatch() {
     
-    let isMatch = firstid === secondid;
+    let isMatch = firstCard.dataset.image === secondCard.dataset.image;
     if (isMatch) perfectMatch += 1;
 
     if (isMatch) pairMatch();
